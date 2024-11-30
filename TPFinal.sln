@@ -3,16 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{A2F965EF-32D8-4D34-9AE1-14FCE496DC70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modelo", "Modelo\Modelo.csproj", "{A2F965EF-32D8-4D34-9AE1-14FCE496DC70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controladores", "Controladores\Controladores.csproj", "{3A428998-F7C6-4735-801B-AB72DBD73DBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controladores", "Controladores\Controladores.csproj", "{3A428998-F7C6-4735-801B-AB72DBD73DBE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A2F965EF-32D8-4D34-9AE1-14FCE496DC70} = {A2F965EF-32D8-4D34-9AE1-14FCE496DC70}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj", "{3E277B11-A4C7-49C9-BD8D-F3CB1FB13498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vista", "Vista\Vista.csproj", "{3E277B11-A4C7-49C9-BD8D-F3CB1FB13498}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3A428998-F7C6-4735-801B-AB72DBD73DBE} = {3A428998-F7C6-4735-801B-AB72DBD73DBE}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{36FDF3E3-B8D2-4F5B-BF2E-67C1D04DDC36}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\Documents\SQL Server Management Studio\Carga de Categorias.sql = ..\..\..\..\..\..\Documents\SQL Server Management Studio\Carga de Categorias.sql
 	EndProjectSection
 EndProject
 Global

@@ -31,15 +31,6 @@ namespace Modelo
         [ForeignKey("ProveedorId")]
         public Categoria Proveedor { get; set; }
 
-        //Métodos
-
-        void AjustarStock(int cantidad) {
-            Stock = Stock + cantidad;
-        }
-
-        void AplicarDescuento (float porcentaje) {
-            Precio -= Precio * porcentaje / 100;
-        }
 
 
     }

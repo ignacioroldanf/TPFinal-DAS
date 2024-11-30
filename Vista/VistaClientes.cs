@@ -15,6 +15,7 @@ namespace Vista
     public partial class VistaClientes : Form
     {
         private readonly ClienteControlador _clienteControlador;
+
         public VistaClientes()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Vista
 
         public void CargarClientes()
         {
-            var clientes = _clienteControlador.GetList();
+            var clientes = _clienteControlador.Listar();
 
             dtgvClientes.DataSource = clientes;
 

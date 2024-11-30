@@ -17,7 +17,7 @@ namespace Controladores
             _context = context;
         }
 
-        public List<Modelo.Cliente> GetList()
+        public List<Modelo.Cliente> Listar()
         {
             return _context.Clientes.ToList();
         }
@@ -31,6 +31,7 @@ namespace Controladores
         public void Eliminar(int id)
         {
             Cliente ClienteSeleccionado = _context.Clientes.Find(id);
+
             if (ClienteSeleccionado != null)
             {
                 _context.Clientes.Remove(ClienteSeleccionado);

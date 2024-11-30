@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             btnClientes = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnProductos = new Button();
+            btnProveedores = new Button();
             button4 = new Button();
             button5 = new Button();
             SuspendLayout();
@@ -45,23 +45,25 @@
             btnClientes.UseVisualStyleBackColor = true;
             btnClientes.Click += btnClientes_Click;
             // 
-            // button2
+            // btnProductos
             // 
-            button2.Location = new Point(347, 80);
-            button2.Name = "button2";
-            button2.Size = new Size(123, 63);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnProductos.Location = new Point(251, 80);
+            btnProductos.Name = "btnProductos";
+            btnProductos.Size = new Size(123, 63);
+            btnProductos.TabIndex = 1;
+            btnProductos.Text = "Productos";
+            btnProductos.UseVisualStyleBackColor = true;
+            btnProductos.Click += btnProductos_Click;
             // 
-            // button3
+            // btnProveedores
             // 
-            button3.Location = new Point(491, 80);
-            button3.Name = "button3";
-            button3.Size = new Size(123, 63);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnProveedores.Location = new Point(380, 80);
+            btnProveedores.Name = "btnProveedores";
+            btnProveedores.Size = new Size(123, 63);
+            btnProveedores.TabIndex = 2;
+            btnProveedores.Text = "Proveedores";
+            btnProveedores.UseVisualStyleBackColor = true;
+            btnProveedores.Click += btnProveedores_Click;
             // 
             // button4
             // 
@@ -88,8 +90,8 @@
             ClientSize = new Size(1412, 663);
             Controls.Add(button5);
             Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnProveedores);
+            Controls.Add(btnProductos);
             Controls.Add(btnClientes);
             Name = "Menu";
             Text = "Form1";
@@ -99,8 +101,8 @@
         #endregion
 
         private Button btnClientes;
-        private Button button2;
-        private Button button3;
+        private Button btnProductos;
+        private Button btnProveedores;
         private Button button4;
         private Button button5;
     }

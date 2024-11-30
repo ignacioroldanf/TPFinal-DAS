@@ -16,8 +16,6 @@ namespace Modelo
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 
-        List<Producto> ListaDeProductos { get; set; } = new List<Producto>();
-
 
 
     }
