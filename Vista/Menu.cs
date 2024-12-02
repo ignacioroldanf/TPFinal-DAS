@@ -33,5 +33,14 @@ namespace Vista
             VistaProveedores vista = new VistaProveedores();
             vista.Show();
         }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            var contexto = new TiendaContext();
+            var clienteControlador = new ClienteControlador(contexto);
+            var facturaControlador = new FacturaControlador(contexto);
+            VistaVentas vista = new VistaVentas(clienteControlador, facturaControlador);
+            vista.Show();
+        }
     }
 }

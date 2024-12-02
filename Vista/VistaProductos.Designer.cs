@@ -81,7 +81,7 @@
             // 
             txtDescripcion.Location = new Point(118, 46);
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(146, 27);
+            txtDescripcion.Size = new Size(166, 27);
             txtDescripcion.TabIndex = 19;
             // 
             // lblNombre
@@ -97,7 +97,7 @@
             // 
             txtNombre.Location = new Point(118, 13);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(146, 27);
+            txtNombre.Size = new Size(166, 27);
             txtNombre.TabIndex = 17;
             // 
             // btnListar
@@ -153,7 +153,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(283, 82);
+            label1.Location = new Point(290, 82);
             label1.Name = "label1";
             label1.Size = new Size(74, 20);
             label1.TabIndex = 29;
@@ -162,7 +162,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(283, 49);
+            label3.Location = new Point(290, 49);
             label3.Name = "label3";
             label3.Size = new Size(45, 20);
             label3.TabIndex = 27;
@@ -170,7 +170,7 @@
             // 
             // txtStock
             // 
-            txtStock.Location = new Point(376, 46);
+            txtStock.Location = new Point(383, 46);
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(146, 27);
             txtStock.TabIndex = 26;
@@ -178,7 +178,7 @@
             // lblPrecio
             // 
             lblPrecio.AutoSize = true;
-            lblPrecio.Location = new Point(283, 16);
+            lblPrecio.Location = new Point(290, 16);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(50, 20);
             lblPrecio.TabIndex = 25;
@@ -186,7 +186,7 @@
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(376, 13);
+            txtPrecio.Location = new Point(383, 13);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(146, 27);
             txtPrecio.TabIndex = 24;
@@ -196,13 +196,13 @@
             cmbProveedor.FormattingEnabled = true;
             cmbProveedor.Location = new Point(118, 79);
             cmbProveedor.Name = "cmbProveedor";
-            cmbProveedor.Size = new Size(146, 28);
+            cmbProveedor.Size = new Size(166, 28);
             cmbProveedor.TabIndex = 30;
             // 
             // cmbCategoria
             // 
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(376, 79);
+            cmbCategoria.Location = new Point(383, 79);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(146, 28);
             cmbCategoria.TabIndex = 31;

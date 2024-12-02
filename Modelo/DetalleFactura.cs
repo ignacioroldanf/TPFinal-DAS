@@ -13,14 +13,14 @@ namespace Modelo
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
+        public int Cantidad { get; set; }
+        public int FacturaId { get; set; }
         public int ProductoId { get; set; }
 
+        [ForeignKey("FacturaId")]
+        public virtual Factura Factura { get; set; }
         [ForeignKey("ProductoId")]
         public virtual Producto Producto { get; set; }
-        public int Cantidad { get; set; }
-        public float PrecioUnitario { get; set; }
-        public float Subtotal => Cantidad * PrecioUnitario;
 
     }
 }

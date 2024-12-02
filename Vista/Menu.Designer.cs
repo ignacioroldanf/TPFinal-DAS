@@ -31,7 +31,7 @@
             btnClientes = new Button();
             btnProductos = new Button();
             btnProveedores = new Button();
-            button4 = new Button();
+            btnVentas = new Button();
             button5 = new Button();
             SuspendLayout();
             // 
@@ -65,14 +65,15 @@
             btnProveedores.UseVisualStyleBackColor = true;
             btnProveedores.Click += btnProveedores_Click;
             // 
-            // button4
+            // btnVentas
             // 
-            button4.Location = new Point(635, 80);
-            button4.Name = "button4";
-            button4.Size = new Size(123, 63);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btnVentas.Location = new Point(635, 80);
+            btnVentas.Name = "btnVentas";
+            btnVentas.Size = new Size(123, 63);
+            btnVentas.TabIndex = 3;
+            btnVentas.Text = "Ventas";
+            btnVentas.UseVisualStyleBackColor = true;
+            btnVentas.Click += btnVentas_Click;
             // 
             // button5
             // 
@@ -89,7 +90,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1412, 663);
             Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(btnVentas);
             Controls.Add(btnProveedores);
             Controls.Add(btnProductos);
             Controls.Add(btnClientes);
@@ -103,7 +104,7 @@
         private Button btnClientes;
         private Button btnProductos;
         private Button btnProveedores;
-        private Button button4;
+        private Button btnVentas;
         private Button button5;
     }
 }

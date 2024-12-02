@@ -22,10 +22,10 @@ namespace Modelo
 
         public List<DetalleFactura> Detalles { get; set; } = new List<DetalleFactura>();
 
-        public double CalcularTotal()
-        {
-            return Detalles.Sum(d => d.Subtotal);
-        }
+        //public double CalcularTotal()
+        //{
+        //    return Detalles.Sum(d => d.Subtotal);
+        //}
 
     }
 }

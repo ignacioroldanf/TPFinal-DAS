@@ -46,12 +46,10 @@ namespace Vista
 
         public void CargarProductos()
         {
-            // Obtener productos, categorías y proveedores
             var productos = _productoControlador.Listar();
             var categorias = _categoriaControlador.Listar();
             var proveedores = _proveedorControlador.Listar();
 
-            // Asignar los productos al DataGridView
             dtgvProductos.DataSource = productos.Select(p => new
             {
                 p.Id,
@@ -83,7 +81,6 @@ namespace Vista
                 dtgvProductos.Columns["Proveedor"].Visible = false;
             }
 
-            // Asegúrate de que las columnas "CategoriaNombre" y "ProveedorNombre" sean visibles
             dtgvProductos.Columns["CategoriaNombre"].HeaderText = "Categoría";
             dtgvProductos.Columns["ProveedorNombre"].HeaderText = "Proveedor";
         }
