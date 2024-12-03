@@ -165,6 +165,9 @@ namespace Vista
             this.Close();
         }
 
-        
+        private void VistaProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

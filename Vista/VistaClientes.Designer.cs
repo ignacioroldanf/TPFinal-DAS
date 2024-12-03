@@ -170,6 +170,7 @@
             Controls.Add(btnAgregar);
             Name = "VistaClientes";
             Text = "VistaClientes";
+            Load += VistaClientes_Load;
             ((System.ComponentModel.ISupportInitialize)dtgvClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();

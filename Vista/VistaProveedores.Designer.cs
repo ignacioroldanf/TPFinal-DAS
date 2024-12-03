@@ -170,6 +170,7 @@
             Controls.Add(btnAgregar);
             Name = "VistaProveedores";
             Text = "VistaProveedores";
+            Load += VistaProveedores_Load;
             ((System.ComponentModel.ISupportInitialize)dtgvProveedores).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -156,5 +156,10 @@ namespace Vista
                 }
             }
         }
+
+        private void VistaClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

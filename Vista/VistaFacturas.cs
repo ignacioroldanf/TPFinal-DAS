@@ -34,6 +34,7 @@ namespace Vista
 
         private void VistaFacturas_Load(object sender, EventArgs e)
         {
+
             var facturaActual = _facturaControlador.BuscarPorID(_facturaId);
             if (facturaActual == null)
             {
@@ -72,6 +73,19 @@ namespace Vista
 
             var productoId = (int)cmbProductos.SelectedValue;
 
+            var producto = _productoControlador.BuscarPorID(productoId);
+            if (producto == null)
+            {
+                MessageBox.Show("Producto no encontrado.");
+                return;
+            }
+
+            if (cantidad > producto.Stock)
+            {
+                MessageBox.Show($"Stock insuficiente. Solo hay {producto.Stock} unidades disponibles.");
+                return;
+            }
+
             var nuevoDetalle = new DetalleFactura
             {
                 FacturaId = _facturaId,
@@ -80,8 +94,12 @@ namespace Vista
             };
 
             _detalleFacturaControlador.Agregar(nuevoDetalle);
-            CargarFacturas();
 
+            // Reducir el stock del producto
+            producto.Stock -= cantidad;
+            _productoControlador.Actualizar(producto);
+
+            CargarFacturas();
         }
 
         public void CargarFacturas()

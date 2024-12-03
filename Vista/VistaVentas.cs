@@ -25,6 +25,7 @@ namespace Vista
         }
         private void VistaVentas_Load(object sender, EventArgs e)
         {
+
             var clientes = _clienteControlador.Listar();
             cmbClientes.DataSource = clientes;
             cmbClientes.DisplayMember = "Nombre";

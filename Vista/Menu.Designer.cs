@@ -32,7 +32,7 @@
             btnProductos = new Button();
             btnProveedores = new Button();
             btnVentas = new Button();
-            button5 = new Button();
+            btnReportes = new Button();
             SuspendLayout();
             // 
             // btnClientes
@@ -75,27 +75,29 @@
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
             // 
-            // button5
+            // btnReportes
             // 
-            button5.Location = new Point(789, 80);
-            button5.Name = "button5";
-            button5.Size = new Size(123, 63);
-            button5.TabIndex = 4;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            btnReportes.Location = new Point(789, 80);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(123, 63);
+            btnReportes.TabIndex = 4;
+            btnReportes.Text = "Reportes";
+            btnReportes.UseVisualStyleBackColor = true;
+            btnReportes.Click += btnReportes_Click;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1412, 663);
-            Controls.Add(button5);
+            Controls.Add(btnReportes);
             Controls.Add(btnVentas);
             Controls.Add(btnProveedores);
             Controls.Add(btnProductos);
             Controls.Add(btnClientes);
             Name = "Menu";
             Text = "Form1";
+            Load += Menu_Load;
             ResumeLayout(false);
         }
 
@@ -105,6 +107,6 @@
         private Button btnProductos;
         private Button btnProveedores;
         private Button btnVentas;
-        private Button button5;
+        private Button btnReportes;
     }
 }

@@ -68,12 +68,22 @@ namespace Controladores
             return _context.Productos.FirstOrDefault(c => c.Id == productoID);
         }
 
-        //Métodos
-
-        void AjustarStock(Producto producto, int cantidad)
+        public void Actualizar(Producto producto)
         {
-            producto.Stock = producto.Stock + cantidad;
+            var productoExistente = _context.Productos.FirstOrDefault(p => p.Id == producto.Id);
+            if (productoExistente != null)
+            {
+                productoExistente.Nombre = producto.Nombre;
+                productoExistente.Descripcion = producto.Descripcion;
+                productoExistente.Precio = producto.Precio;
+                productoExistente.Stock = producto.Stock;
+                productoExistente.CategoriaId = producto.CategoriaId;
+                productoExistente.ProveedorId = producto.ProveedorId;
+
+                _context.SaveChanges();
+            }
         }
+
 
         void AplicarDescuento(Producto producto, float porcentaje)
         {
