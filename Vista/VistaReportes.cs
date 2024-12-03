@@ -91,6 +91,7 @@ namespace Vista
                 Categoria = categoria.FirstOrDefault(c => c.Id == p.CategoriaId)?.Nombre,
                 CantidadVendida = detfacturas.Count(df => df.ProductoId == p.Id)
             })
+                .OrderByDescending(p => p.CantidadVendida)
                 .ToList();
 
             dtgvTopProductos.Columns["Id"].HeaderText = "Codigo de Producto";
@@ -105,6 +106,8 @@ namespace Vista
         private void VistaReportes_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
+            dtgvTopProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
 
             var clientes = _clienteControlador.Listar();
             cmbCliente.DataSource = clientes;

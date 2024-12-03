@@ -10,14 +10,18 @@ namespace Vista
             InitializeComponent();
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VistaClientes vista = new VistaClientes();
             vista.Show();
-
         }
 
-        private void btnProductos_Click(object sender, EventArgs e)
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var contexto = new TiendaContext();
             var productoControlador = new ProductoControlador(contexto);
@@ -28,13 +32,13 @@ namespace Vista
             vista.Show();
         }
 
-        private void btnProveedores_Click(object sender, EventArgs e)
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VistaProveedores vista = new VistaProveedores();
             vista.Show();
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var contexto = new TiendaContext();
             var clienteControlador = new ClienteControlador(contexto);
@@ -43,7 +47,7 @@ namespace Vista
             vista.Show();
         }
 
-        private void btnReportes_Click(object sender, EventArgs e)
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var contexto = new TiendaContext();
             var clienteControlador = new ClienteControlador(contexto);
@@ -55,9 +59,9 @@ namespace Vista
             vista.Show();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
+            this.Close();
         }
     }
 }

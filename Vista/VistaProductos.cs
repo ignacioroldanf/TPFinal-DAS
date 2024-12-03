@@ -30,6 +30,7 @@ namespace Vista
 
         private void VistaProductos_Load(object sender, EventArgs e)
         {
+            dtgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             var categorias = _categoriaControlador.Listar();
             cmbCategoria.DataSource = categorias;

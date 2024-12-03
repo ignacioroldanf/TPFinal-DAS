@@ -167,6 +167,7 @@ namespace Vista
 
         private void VistaProveedores_Load(object sender, EventArgs e)
         {
+            dtgvProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
         }
     }

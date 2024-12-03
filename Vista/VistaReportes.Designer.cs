@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             cmbCliente = new ComboBox();
-            lblCliente = new Label();
             label3 = new Label();
             btnSalir = new Button();
             label2 = new Label();
@@ -40,6 +39,7 @@
             dtHasta = new DateTimePicker();
             dtgvFacturasClientes = new DataGridView();
             dtgvTopProductos = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dtgvFacturasFecha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvFacturasClientes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvTopProductos).BeginInit();
@@ -48,25 +48,16 @@
             // cmbCliente
             // 
             cmbCliente.FormattingEnabled = true;
-            cmbCliente.Location = new Point(671, 83);
+            cmbCliente.Location = new Point(903, 48);
             cmbCliente.Name = "cmbCliente";
             cmbCliente.Size = new Size(146, 28);
             cmbCliente.TabIndex = 49;
             cmbCliente.SelectedIndexChanged += cmbCliente_SelectedIndexChanged;
             // 
-            // lblCliente
-            // 
-            lblCliente.AutoSize = true;
-            lblCliente.Location = new Point(610, 86);
-            lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(55, 20);
-            lblCliente.TabIndex = 47;
-            lblCliente.Text = "Cliente";
-            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(31, 38);
+            label3.Location = new Point(117, 51);
             label3.Name = "label3";
             label3.Size = new Size(123, 20);
             label3.TabIndex = 46;
@@ -74,7 +65,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(1043, 560);
+            btnSalir.Location = new Point(1129, 522);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(120, 54);
             btnSalir.TabIndex = 42;
@@ -85,7 +76,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(31, 577);
+            label2.Location = new Point(117, 539);
             label2.Name = "label2";
             label2.Size = new Size(170, 20);
             label2.TabIndex = 41;
@@ -94,7 +85,7 @@
             // dtgvFacturasFecha
             // 
             dtgvFacturasFecha.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvFacturasFecha.Location = new Point(31, 149);
+            dtgvFacturasFecha.Location = new Point(117, 111);
             dtgvFacturasFecha.Name = "dtgvFacturasFecha";
             dtgvFacturasFecha.RowHeadersWidth = 51;
             dtgvFacturasFecha.Size = new Size(553, 377);
@@ -102,7 +93,7 @@
             // 
             // dtDesde
             // 
-            dtDesde.Location = new Point(88, 69);
+            dtDesde.Location = new Point(396, 31);
             dtDesde.Name = "dtDesde";
             dtDesde.Size = new Size(274, 27);
             dtDesde.TabIndex = 52;
@@ -111,7 +102,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(31, 74);
+            label4.Location = new Point(339, 36);
             label4.Name = "label4";
             label4.Size = new Size(51, 20);
             label4.TabIndex = 54;
@@ -120,7 +111,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(31, 107);
+            label5.Location = new Point(339, 69);
             label5.Name = "label5";
             label5.Size = new Size(47, 20);
             label5.TabIndex = 56;
@@ -128,7 +119,7 @@
             // 
             // dtHasta
             // 
-            dtHasta.Location = new Point(88, 102);
+            dtHasta.Location = new Point(396, 64);
             dtHasta.Name = "dtHasta";
             dtHasta.Size = new Size(274, 27);
             dtHasta.TabIndex = 55;
@@ -137,7 +128,7 @@
             // dtgvFacturasClientes
             // 
             dtgvFacturasClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvFacturasClientes.Location = new Point(610, 149);
+            dtgvFacturasClientes.Location = new Point(696, 111);
             dtgvFacturasClientes.Name = "dtgvFacturasClientes";
             dtgvFacturasClientes.RowHeadersWidth = 51;
             dtgvFacturasClientes.Size = new Size(553, 377);
@@ -146,17 +137,27 @@
             // dtgvTopProductos
             // 
             dtgvTopProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvTopProductos.Location = new Point(31, 640);
+            dtgvTopProductos.Location = new Point(117, 602);
             dtgvTopProductos.Name = "dtgvTopProductos";
             dtgvTopProductos.RowHeadersWidth = 51;
             dtgvTopProductos.Size = new Size(1132, 377);
             dtgvTopProductos.TabIndex = 58;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(696, 51);
+            label1.Name = "label1";
+            label1.Size = new Size(201, 20);
+            label1.TabIndex = 59;
+            label1.Text = "Facturas emitidas por cliente:";
             // 
             // VistaReportes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1709, 1084);
+            Controls.Add(label1);
             Controls.Add(dtgvTopProductos);
             Controls.Add(dtgvFacturasClientes);
             Controls.Add(label5);
@@ -164,7 +165,6 @@
             Controls.Add(label4);
             Controls.Add(dtDesde);
             Controls.Add(cmbCliente);
-            Controls.Add(lblCliente);
             Controls.Add(label3);
             Controls.Add(btnSalir);
             Controls.Add(label2);
@@ -182,7 +182,6 @@
         #endregion
 
         private ComboBox cmbCliente;
-        private Label lblCliente;
         private Label label3;
         private Button btnSalir;
         private Label label2;
@@ -193,5 +192,6 @@
         private DateTimePicker dtHasta;
         private DataGridView dtgvFacturasClientes;
         private DataGridView dtgvTopProductos;
+        private Label label1;
     }
 }
