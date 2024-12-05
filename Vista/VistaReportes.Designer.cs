@@ -48,7 +48,7 @@
             // cmbCliente
             // 
             cmbCliente.FormattingEnabled = true;
-            cmbCliente.Location = new Point(903, 48);
+            cmbCliente.Location = new Point(913, 48);
             cmbCliente.Name = "cmbCliente";
             cmbCliente.Size = new Size(146, 28);
             cmbCliente.TabIndex = 49;
@@ -65,7 +65,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(1129, 522);
+            btnSalir.Location = new Point(1139, 522);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(120, 54);
             btnSalir.TabIndex = 42;
@@ -88,12 +88,12 @@
             dtgvFacturasFecha.Location = new Point(117, 111);
             dtgvFacturasFecha.Name = "dtgvFacturasFecha";
             dtgvFacturasFecha.RowHeadersWidth = 51;
-            dtgvFacturasFecha.Size = new Size(553, 377);
+            dtgvFacturasFecha.Size = new Size(560, 377);
             dtgvFacturasFecha.TabIndex = 35;
             // 
             // dtDesde
             // 
-            dtDesde.Location = new Point(396, 31);
+            dtDesde.Location = new Point(403, 31);
             dtDesde.Name = "dtDesde";
             dtDesde.Size = new Size(274, 27);
             dtDesde.TabIndex = 52;
@@ -102,7 +102,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(339, 36);
+            label4.Location = new Point(346, 36);
             label4.Name = "label4";
             label4.Size = new Size(51, 20);
             label4.TabIndex = 54;
@@ -111,7 +111,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(339, 69);
+            label5.Location = new Point(346, 69);
             label5.Name = "label5";
             label5.Size = new Size(47, 20);
             label5.TabIndex = 56;
@@ -119,7 +119,7 @@
             // 
             // dtHasta
             // 
-            dtHasta.Location = new Point(396, 64);
+            dtHasta.Location = new Point(403, 64);
             dtHasta.Name = "dtHasta";
             dtHasta.Size = new Size(274, 27);
             dtHasta.TabIndex = 55;
@@ -128,7 +128,7 @@
             // dtgvFacturasClientes
             // 
             dtgvFacturasClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvFacturasClientes.Location = new Point(696, 111);
+            dtgvFacturasClientes.Location = new Point(706, 111);
             dtgvFacturasClientes.Name = "dtgvFacturasClientes";
             dtgvFacturasClientes.RowHeadersWidth = 51;
             dtgvFacturasClientes.Size = new Size(553, 377);
@@ -140,13 +140,13 @@
             dtgvTopProductos.Location = new Point(117, 602);
             dtgvTopProductos.Name = "dtgvTopProductos";
             dtgvTopProductos.RowHeadersWidth = 51;
-            dtgvTopProductos.Size = new Size(1132, 377);
+            dtgvTopProductos.Size = new Size(1142, 377);
             dtgvTopProductos.TabIndex = 58;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(696, 51);
+            label1.Location = new Point(706, 51);
             label1.Name = "label1";
             label1.Size = new Size(201, 20);
             label1.TabIndex = 59;

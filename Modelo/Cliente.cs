@@ -18,4 +18,15 @@ namespace Modelo
         public int Telefono { get; set;}
 
     }
+
+    public class ClienteIndividual : Cliente
+    {
+        public string DNI { get; set; }
+    }
+
+    public class ClienteEmpresarial : Cliente
+    {
+        public string CUIT { get; set; }
+    }
+
 }

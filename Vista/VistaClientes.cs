@@ -27,14 +27,32 @@ namespace Vista
         {
             var clientes = _clienteControlador.Listar();
 
-            dtgvClientes.DataSource = clientes;
+            dtgvClientes.DataSource = clientes.Select(c => new
+            {
+                c.Id,
+                c.Nombre,
+                c.Direccion,
+                c.Telefono,
+                Tipo = c is ClienteIndividual ? "Individual" : "Empresarial",
+                Identificacion = c is ClienteIndividual ci ? ci.DNI : (c is ClienteEmpresarial ce ? ce.CUIT : "")
+            }).ToList();
 
+            dtgvClientes.Columns["Id"].HeaderText = "ID";
+            dtgvClientes.Columns["Nombre"].HeaderText = "Nombre";
+            dtgvClientes.Columns["Direccion"].HeaderText = "Dirección";
+            dtgvClientes.Columns["Telefono"].HeaderText = "Teléfono";
+            dtgvClientes.Columns["Tipo"].HeaderText = "Tipo de Cliente";
+            dtgvClientes.Columns["Identificacion"].HeaderText = "DNI/CUIT";
         }
+
+
         public void VaciarTxts()
         {
             txtDireccion.Text = string.Empty;
             txtNombre.Text = string.Empty;
             txtTelefono.Text = string.Empty;
+            txtDNI.Text = string.Empty;
+            txtCUIT.Text = string.Empty;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -51,14 +69,31 @@ namespace Vista
                 return;
             }
 
-            var nuevoCliente = new Cliente
-            {
-                Nombre = txtNombre.Text,
-                Direccion = txtDireccion.Text,
-                Telefono = telefono
-            };
+            Cliente nuevoCliente;
 
-            _clienteControlador.Agregar(nuevoCliente); // Llama al controlador para agregar el cliente
+            if (chEmpresarial.Checked)
+            {
+                nuevoCliente = new ClienteEmpresarial
+                {
+                    Nombre = txtNombre.Text,
+                    Direccion = txtDireccion.Text,
+                    Telefono = telefono,
+                    CUIT = txtCUIT.Text
+                };
+            }
+            else
+            {
+                nuevoCliente = new ClienteIndividual
+                {
+                    Nombre = txtNombre.Text,
+                    Direccion = txtDireccion.Text,
+                    Telefono = telefono,
+                    DNI = txtDNI.Text
+                };
+            }
+
+
+            _clienteControlador.Agregar(nuevoCliente); 
             MessageBox.Show("Cliente agregado correctamente");
             CargarClientes();
             VaciarTxts();
@@ -115,6 +150,14 @@ namespace Vista
                     txtNombre.Text = ClienteSeleccionado.Nombre;
                     txtDireccion.Text = ClienteSeleccionado.Direccion;
                     txtTelefono.Text = ClienteSeleccionado.Telefono.ToString();
+                    if (ClienteSeleccionado is ClienteIndividual ci)
+                    {
+                        txtDNI.Text = ci.DNI;
+                    }
+                    else if (ClienteSeleccionado is ClienteEmpresarial ce)
+                    {
+                        txtCUIT.Text = ce.CUIT;
+                    }
                 }
             }
         }
@@ -146,6 +189,15 @@ namespace Vista
                     ClienteSeleccionado.Direccion = txtDireccion.Text;
                     ClienteSeleccionado.Telefono = telefono;
 
+                    if (ClienteSeleccionado is ClienteIndividual ci)
+                    {
+                        ci.DNI = txtDNI.Text;
+                    }
+                    else if (ClienteSeleccionado is ClienteEmpresarial ce)
+                    {
+                        ce.CUIT = txtCUIT.Text;
+                    }
+
                     _clienteControlador.Modificar(ClienteSeleccionado);
 
                     CargarClientes();
@@ -155,11 +207,27 @@ namespace Vista
                     MessageBox.Show("Cliente no encontrado.");
                 }
             }
+            VaciarTxts();
         }
 
         private void VistaClientes_Load(object sender, EventArgs e)
         {
+            txtDNI.Visible = true;
+            txtCUIT.Visible = false;
+        }
 
+        private void chEmpresarial_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chEmpresarial.Checked)
+            {
+                txtDNI.Visible = false;
+                txtCUIT.Visible = true;
+            }
+            else
+            {
+                txtDNI.Visible = true;
+                txtCUIT.Visible = false;
+            }
         }
     }
 }

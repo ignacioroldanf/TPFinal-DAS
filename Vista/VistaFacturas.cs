@@ -100,6 +100,7 @@ namespace Vista
             _productoControlador.Actualizar(producto);
 
             CargarFacturas();
+            VaciarTxts();
         }
 
         public void CargarFacturas()
@@ -145,6 +146,10 @@ namespace Vista
         private void cmbFactura_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        public void VaciarTxts()
+        {
+            txtCantidad.Text = string.Empty;
         }
 
     }

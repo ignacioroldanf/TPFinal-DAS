@@ -258,6 +258,7 @@ namespace Vista
                     MessageBox.Show("Producto no encontrado.");
                 }
             }
+            VaciarTxts();
         }
 
 

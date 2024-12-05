@@ -40,12 +40,18 @@
             label2 = new Label();
             txtTelefono = new TextBox();
             btnSalir = new Button();
+            label3 = new Label();
+            txtDNI = new TextBox();
+            chEmpresarial = new CheckBox();
+            label4 = new Label();
+            label5 = new Label();
+            txtCUIT = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dtgvClientes).BeginInit();
             SuspendLayout();
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(261, 54);
+            btnAgregar.Location = new Point(486, 54);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(120, 54);
             btnAgregar.TabIndex = 0;
@@ -55,7 +61,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(387, 54);
+            btnEliminar.Location = new Point(612, 54);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(120, 54);
             btnEliminar.TabIndex = 1;
@@ -65,7 +71,7 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(513, 54);
+            btnModificar.Location = new Point(738, 54);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(120, 54);
             btnModificar.TabIndex = 2;
@@ -85,7 +91,7 @@
             // 
             // btnListar
             // 
-            btnListar.Location = new Point(639, 54);
+            btnListar.Location = new Point(864, 54);
             btnListar.Name = "btnListar";
             btnListar.Size = new Size(120, 54);
             btnListar.TabIndex = 4;
@@ -151,11 +157,68 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(259, 71);
+            label3.Name = "label3";
+            label3.Size = new Size(35, 20);
+            label3.TabIndex = 13;
+            label3.Text = "DNI";
+            // 
+            // txtDNI
+            // 
+            txtDNI.Location = new Point(300, 68);
+            txtDNI.Name = "txtDNI";
+            txtDNI.Size = new Size(146, 27);
+            txtDNI.TabIndex = 12;
+            // 
+            // chEmpresarial
+            // 
+            chEmpresarial.AutoSize = true;
+            chEmpresarial.Location = new Point(428, 41);
+            chEmpresarial.Name = "chEmpresarial";
+            chEmpresarial.Size = new Size(18, 17);
+            chEmpresarial.TabIndex = 14;
+            chEmpresarial.UseVisualStyleBackColor = true;
+            chEmpresarial.CheckedChanged += chEmpresarial_CheckedChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(259, 38);
+            label4.Name = "label4";
+            label4.Size = new Size(112, 20);
+            label4.TabIndex = 15;
+            label4.Text = "Es empresarial?";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(254, 107);
+            label5.Name = "label5";
+            label5.Size = new Size(40, 20);
+            label5.TabIndex = 17;
+            label5.Text = "CUIT";
+            // 
+            // txtCUIT
+            // 
+            txtCUIT.Location = new Point(300, 104);
+            txtCUIT.Name = "txtCUIT";
+            txtCUIT.Size = new Size(146, 27);
+            txtCUIT.TabIndex = 16;
+            // 
             // VistaClientes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1190, 795);
+            Controls.Add(label5);
+            Controls.Add(txtCUIT);
+            Controls.Add(label4);
+            Controls.Add(chEmpresarial);
+            Controls.Add(label3);
+            Controls.Add(txtDNI);
             Controls.Add(btnSalir);
             Controls.Add(label2);
             Controls.Add(txtTelefono);
@@ -190,5 +253,11 @@
         private Label label2;
         private TextBox txtTelefono;
         private Button btnSalir;
+        private Label label3;
+        private TextBox txtDNI;
+        private CheckBox chEmpresarial;
+        private Label label4;
+        private Label label5;
+        private TextBox txtCUIT;
     }
 }

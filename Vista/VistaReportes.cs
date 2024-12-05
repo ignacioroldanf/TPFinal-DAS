@@ -89,13 +89,15 @@ namespace Vista
                 p.Nombre,
                 p.Descripcion,
                 Categoria = categoria.FirstOrDefault(c => c.Id == p.CategoriaId)?.Nombre,
-                CantidadVendida = detfacturas.Count(df => df.ProductoId == p.Id)
+                CantidadVendida = detfacturas.Count(df => df.ProductoId == p.Id),
+                p.Stock
             })
                 .OrderByDescending(p => p.CantidadVendida)
                 .ToList();
 
             dtgvTopProductos.Columns["Id"].HeaderText = "Codigo de Producto";
             dtgvTopProductos.Columns["CantidadVendida"].HeaderText = "Cantidad Vendida";
+            dtgvTopProductos.Columns["Stock"].HeaderText = "Stock Disponible";
         }
 
 
